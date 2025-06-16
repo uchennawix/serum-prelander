@@ -2,76 +2,128 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Miracle Serum – Clear Skin in 7 Days</title>
+  <title>Hair Growth Miracle Serum</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 20px;
       background: #fffef5;
       color: #333;
+      text-align: center;
+      padding: 20px;
     }
     h1 {
-      color: #d2691e;
+      color: #2f855a;
+      font-size: 26px;
     }
     .image {
       width: 90%;
       max-width: 400px;
-      margin: 20px auto;
       border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .stars {
+      font-size: 22px;
+      color: #ffc107;
+      margin-bottom: 10px;
+    }
+    .description {
+      font-size: 17px;
+      margin: 15px 0;
+    }
+    .section {
+      margin-top: 30px;
     }
     .btn-whatsapp {
-      display: inline-block;
       background-color: #25D366;
       color: white;
-      font-size: 20px;
       padding: 15px 30px;
-      margin-top: 30px;
-      border-radius: 50px;
+      font-size: 20px;
+      border-radius: 40px;
       text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      display: inline-block;
+      margin-top: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
     .btn-whatsapp img {
       height: 20px;
       vertical-align: middle;
       margin-right: 10px;
     }
-    .section {
-      margin: 30px 0;
+    .testimonial-slider {
+      margin-top: 40px;
+      overflow: hidden;
+      height: 100px;
+      position: relative;
+    }
+    .testimonial-slide {
+      position: absolute;
+      width: 100%;
+      transition: opacity 1s ease-in-out;
+      opacity: 0;
+    }
+    .testimonial-slide.active {
+      opacity: 1;
+      position: relative;
     }
   </style>
 </head>
 <body>
 
-  <h1>✨ Miracle Serum For Glowing Skin ✨</h1>
+  <h1>🌿 Hair Growth Miracle Serum – See Results in Days!</h1>
+  <div class="stars">★★★★☆ (4/5)</div>
 
-  <img src="https://i.imgur.com/WKq7uHd.jpg" alt="Before & After" class="image">
+  <img src="https://i.pinimg.com/474x/4c/9c/e1/4c9ce1ca693519c9126b7f568fcc5f8d.jpg" alt="Hair Before & After" class="image">
 
-  <div class="section">
-    <p>🌿 See real skin transformation in just 7 days!<br>
-    ✅ Fades dark spots<br>
-    ✅ Evens out skin tone<br>
-    ✅ Brings out your natural glow 💫</p>
+  <div class="description">
+    🧴 Restore bald spots and boost growth fast!<br>
+    ✅ Visible results in 5–10 days<br>
+    ✅ Strengthens roots, reduces shedding<br>
+    ✅ For men and women 💁🏾‍♀️👨🏾‍🦱<br>
   </div>
 
-  <img src="https://i.imgur.com/O7ZyzNb.jpg" alt="Serum Bottle" class="image">
+  <img src="https://images-eu.ssl-images-amazon.com/images/I/71pyhaeCT0L._AC_UL600_SR600,600_.jpg" alt="Hair Serum Product" class="image">
 
   <div class="section">
     <h2>Ingredients & Benefits 🌸</h2>
-    <p>💧 Jojoba Oil – deep hydration<br>
-    🍋 Lemon Extract – clears blemishes<br>
-    🌰 Vitamin E – natural anti-aging<br>
-    🌹 Rosehip Oil – promotes skin renewal</p>
-    <p>🎯 Suitable for all skin types<br>
-    🕊️ 100% Natural – No harsh chemicals</p>
+    <p>🌰 Castor Oil – stimulates follicles<br>
+       🍃 Aloe Vera – reduces scalp itch<br>
+       🌿 Ginger & Ginseng – boosts circulation<br>
+       🌻 Vitamin E – improves shine & growth</p>
+  </div>
+
+  <div class="section">
+    <h2>What Our Customers Say ❤️</h2>
+    <div class="testimonial-slider" id="testimonial-slider">
+      <div class="testimonial-slide active">“My bald patch is filling in, unbelievable!” – Chika</div>
+      <div class="testimonial-slide">“After 7 days, my hairline started coming back!” – Abdul</div>
+      <div class="testimonial-slide">“It smells great and works like magic!” – Linda</div>
+      <div class="testimonial-slide">“I’ve regained confidence, thank you!” – Peter</div>
+      <div class="testimonial-slide">“Hair feels stronger and looks healthy.” – Ruth</div>
+      <div class="testimonial-slide">“Delivery was fast and results real.” – Johnson</div>
+      <div class="testimonial-slide">“It worked better than anything I’ve tried.” – Ifeoma</div>
+      <div class="testimonial-slide">“Edges are coming back finally!” – Anita</div>
+      <div class="testimonial-slide">“Even my barber asked what I’m using!” – Kelechi</div>
+      <div class="testimonial-slide">“Perfect for beard growth too!” – Tunde</div>
+    </div>
   </div>
 
   <a href="https://wa.me/234XXXXXXXXXX" class="btn-whatsapp">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp logo">
-    Order Now on WhatsApp
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp icon">
+    Order on WhatsApp Now
   </a>
+
+  <script>
+    const slides = document.querySelectorAll('.testimonial-slide');
+    let index = 0;
+
+    setInterval(() => {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, 3000);
+  </script>
 
 </body>
 </html>
