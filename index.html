@@ -26,7 +26,7 @@
     .stars {
       font-size: 22px;
       color: #ffc107;
-      margin-bottom: 10px;
+      margin: 10px 0;
     }
     .description {
       font-size: 17px;
@@ -51,28 +51,29 @@
       vertical-align: middle;
       margin-right: 10px;
     }
-    .testimonial-slider {
-      margin-top: 40px;
-      overflow: hidden;
-      height: 100px;
-      position: relative;
+    .testimonials {
+      text-align: left;
+      margin: 0 auto;
+      max-width: 600px;
+      padding: 10px;
     }
-    .testimonial-slide {
-      position: absolute;
-      width: 100%;
-      transition: opacity 1s ease-in-out;
-      opacity: 0;
+    .testimonial {
+      background-color: #f9f9f9;
+      border-left: 4px solid #2f855a;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
     }
-    .testimonial-slide.active {
-      opacity: 1;
-      position: relative;
+    .testimonial strong {
+      display: block;
+      color: #2f855a;
+      margin-bottom: 5px;
     }
   </style>
 </head>
 <body>
 
   <h1>🌿 Hair Growth Miracle Serum – See Results in Days!</h1>
-  <div class="stars">★★★★☆ (4/5)</div>
 
   <img src="https://i.pinimg.com/474x/4c/9c/e1/4c9ce1ca693519c9126b7f568fcc5f8d.jpg" alt="Hair Before & After" class="image">
 
@@ -94,36 +95,56 @@
   </div>
 
   <div class="section">
-    <h2>What Our Customers Say ❤️</h2>
-    <div class="testimonial-slider" id="testimonial-slider">
-      <div class="testimonial-slide active">“My bald patch is filling in, unbelievable!” – Chika</div>
-      <div class="testimonial-slide">“After 7 days, my hairline started coming back!” – Abdul</div>
-      <div class="testimonial-slide">“It smells great and works like magic!” – Linda</div>
-      <div class="testimonial-slide">“I’ve regained confidence, thank you!” – Peter</div>
-      <div class="testimonial-slide">“Hair feels stronger and looks healthy.” – Ruth</div>
-      <div class="testimonial-slide">“Delivery was fast and results real.” – Johnson</div>
-      <div class="testimonial-slide">“It worked better than anything I’ve tried.” – Ifeoma</div>
-      <div class="testimonial-slide">“Edges are coming back finally!” – Anita</div>
-      <div class="testimonial-slide">“Even my barber asked what I’m using!” – Kelechi</div>
-      <div class="testimonial-slide">“Perfect for beard growth too!” – Tunde</div>
+    <h2>Customer Reviews</h2>
+    <div class="stars">★★★★☆ (4/5)</div>
+    <div class="testimonials">
+      <div class="testimonial">
+        <strong>Chiamaka O.</strong>
+        “My bald patch is filling in, unbelievable!”
+      </div>
+      <div class="testimonial">
+        <strong>Peter B.</strong>
+        “After 7 days, my hairline started coming back!”
+      </div>
+      <div class="testimonial">
+        <strong>Ifunanya T.</strong>
+        “It smells great and works like magic!”
+      </div>
+      <div class="testimonial">
+        <strong>Abdul K.</strong>
+        “I’ve regained confidence, thank you!”
+      </div>
+      <div class="testimonial">
+        <strong>Linda E.</strong>
+        “Hair feels stronger and looks healthy.”
+      </div>
+      <div class="testimonial">
+        <strong>Johnson A.</strong>
+        “Delivery was fast and results real.”
+      </div>
+      <div class="testimonial">
+        <strong>Kelechi M.</strong>
+        “It worked better than anything I’ve tried.”
+      </div>
+      <div class="testimonial">
+        <strong>Anita I.</strong>
+        “Edges are coming back finally!”
+      </div>
+      <div class="testimonial">
+        <strong>Ruth D.</strong>
+        “Even my barber asked what I’m using!”
+      </div>
+      <div class="testimonial">
+        <strong>Tunde F.</strong>
+        “Perfect for beard growth too!”
+      </div>
     </div>
   </div>
 
-  <a href="https://wa.me/234XXXXXXXXXX" class="btn-whatsapp">
+  <a href="https://wa.me/33782458831" class="btn-whatsapp">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp icon">
     Order on WhatsApp Now
   </a>
-
-  <script>
-    const slides = document.querySelectorAll('.testimonial-slide');
-    let index = 0;
-
-    setInterval(() => {
-      slides[index].classList.remove('active');
-      index = (index + 1) % slides.length;
-      slides[index].classList.add('active');
-    }, 3000);
-  </script>
 
 </body>
 </html>
